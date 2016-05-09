@@ -18,8 +18,8 @@ public class FetchWeatherService {
 	    try {
 	    	RestTemplate rest = new RestTemplate();
 	    	String url = pojo.getWeatherURL();
-	    	url.replace("#", pojo.getCity());
-	    	url.replace("@", pojo.getCountry());
+	    	url = url.replace("#", pojo.getCity());
+	    	url = url.replace("@", pojo.getCountry());
 	    	String response = rest.getForObject(url,String.class);
 	    	Gson gson = new Gson();
 	    	JsonObject job = gson.fromJson(response, JsonObject.class);

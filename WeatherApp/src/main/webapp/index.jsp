@@ -1,1 +1,1 @@
-<jsp:forward page="tests.jsp"></jsp:forward>
+<jsp:forward page="weatherApp.html"></jsp:forward>

@@ -11,7 +11,7 @@
 	<form:form action="submit.html" method="POST">
 		<table>
 			<tr>
-				<form:select path="name">
+				<form:select path="city">
 					<form:option value="" label="...." />
 					<form:options items="${cityList}" />
 				</form:select>

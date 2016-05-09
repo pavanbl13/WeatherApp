@@ -36,10 +36,10 @@ public class FormController {
 		 ArrayList<String> cityList =  new ArrayList<String>(Arrays.asList(cityArr));
 		 return cityList;
 	 }
-	@RequestMapping("/tests")
+	@RequestMapping("/weatherApp")
 	public ModelAndView getList() {
 
-		return new ModelAndView("test", "command", new Weather());
+		return new ModelAndView("weatherForm", "command", new Weather());
 	}
 	@RequestMapping(value = "/submit", method = RequestMethod.POST)
 	
