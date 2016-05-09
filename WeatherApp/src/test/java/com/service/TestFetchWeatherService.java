@@ -11,7 +11,9 @@ public class TestFetchWeatherService extends TestCase {
 		Weather pojo = new Weather();
 		pojo.setCity("Sydney");
 		pojo.setCountry("aus");
-		service.getWeather(pojo);
+		pojo.setWeatherURL("http://api.openweathermap.org/data/2.5/weather?q=#,@&appid=008d10a1d28bbac61f0bcff204c3b573");
+		Double temp = service.getWeather(pojo);
+		assertTrue(temp != 0.0);
 	}
 
 }
